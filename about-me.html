@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>About me</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="theme-color" content="#151515">
+    <meta name="theme-color"
+          content="#ecd96f"
+          media="(prefers-color-scheme: light)">
+    <meta name="theme-color"
+          content="#0b3e05"
+          media="(prefers-color-scheme: dark)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="author" content="Tu nombre">
+    <meta name="generator" content="Clojure">
+    <meta name="keywords" content="html, css, javascript">
+    <meta name="description" content="my description...">
+    <meta property="og:image" content="img/screenshot.png">
+    <meta property="og:title" content="The Rock">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@cuenta">
+    <meta name="twitter:creator" content="@cuenta">
+    <meta property="og:image:secure_url" content="https://...">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="">
+    <!--JavaScript-->
+    <script src="https://unpkg.com/alpinejs" defer></script> <!--Importante:faltaba poner el https: además de alpines-->
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;500;700&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/sapps-studio/symbiosis-css/symbiosis.min.css">
+    <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+    <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 601px)">
+</head>
+<body>
+    <header
+        class="header"
+        x-data="{ open: false, isTopScroll: true }"
+        @scroll.window="isTopScroll = window.pageYOffset === 0"
+        :class="isTopScroll ? '' : 'header__black'"
+    >
+        <div class="container__header">
+            <div class="header__logo">Clean blog</div>
+            <nav class="nav" :class="open ? 'nav__show' : ''">
+                <button class="nav__button header__boton-cerrar" @click="open = false">
+                    <img src="img/close-white.png" alt="Cerrar menu" class="header__boton-cerrar-img">
+                </button>
+                <ul class="nav__lista">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">HOME</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about-me.html" class="nav__link">ABOUT</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="posts.html" class="nav__link">POSTS</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="nav__button header__boton-abrir" @click="open = true">
+                <img src="img/menu-white.png" alt="Abrir menu">
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="landing--about">
+            <div class="landing__texts">
+                <div class="landing__title">About me</div>
+                <div class="landing__text">This is what I do</div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="description">
+                <p class="description__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad adipisci alias, dignissimos ea esse facere, hic in laborum minima nesciunt odio officia pariatur porro provident quo totam ullam voluptates.</p>
+                <p class="description__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deleniti deserunt dolor doloribus eligendi ex explicabo, impedit ipsa ipsam nihil nobis non placeat quaerat quidem rem repudiandae rerum sapiente temporibus.</p>
+                <p class="description__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores est iusto. Autem, beatae consequuntur cupiditate debitis dignissimos dolores facilis id illum minus nemo perferendis, quia repellat similique sint tempora.</p>
+            </div>
+        </section>
+    </main>
+    <div class="separador"></div>
+    <footer class="container">
+        <nav class="footer__nav">
+            <ul class="footer__ul">
+                <li class="footer__li">
+                    <div class="circle">
+                        <a href="#" class="footer__link">
+                            <img src="img/email.png" alt="Gmail" class="footer__img">
+                        </a>
+                    </div>
+                </li>
+                <li class="footer__li">
+                    <div class="circle">
+                        <a href="#" class="footer__link">
+                            <img src="img/tw.png" alt="Twitter" class="footer__img">
+                        </a>
+                    </div>
+                </li>
+                <li class="footer__li">
+                    <div class="circle">
+                        <a href="#" class="footer__link">
+                            <img src="img/fb.png" alt="Facebook" class="footer__img">
+                        </a>
+                    </div>
+                </li>
+                <li class="footer__li">
+                    <div class="circle">
+                        <a href="#" class="footer__link">
+                            <img src="img/github.png" alt="Github" class="footer__img">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <p class="copyright">Copyright © Start Bootstrap 2021</p>
+    </footer>
+</body>
+</html>

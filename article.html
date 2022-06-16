@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Article</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="theme-color" content="#151515">
+    <meta name="theme-color"
+          content="#ecd96f"
+          media="(prefers-color-scheme: light)">
+    <meta name="theme-color"
+          content="#0b3e05"
+          media="(prefers-color-scheme: dark)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="author" content="Tu nombre">
+    <meta name="generator" content="Clojure">
+    <meta name="keywords" content="html, css, javascript">
+    <meta name="description" content="my description...">
+    <meta property="og:image" content="img/screenshot.png">
+    <meta property="og:title" content="The Rock">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@cuenta">
+    <meta name="twitter:creator" content="@cuenta">
+    <meta property="og:image:secure_url" content="https://...">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="">
+    <!--JavaScript-->
+    <script src="https://unpkg.com/alpinejs" defer></script> <!--Importante:faltaba poner el https: además de alpines-->
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;500;700&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/sapps-studio/symbiosis-css/symbiosis.min.css">
+    <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+    <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 601px)">
+</head>
+<body>
+    <header
+        class="header"
+        x-data="{ open: false, isTopScroll: true }"
+        @scroll.window="isTopScroll = window.pageYOffset === 0"
+        :class="isTopScroll ? '' : 'header__black'"
+    >
+        <div class="container__header">
+            <div class="header__logo">Clean blog</div>
+            <nav class="nav" :class="open ? 'nav__show' : ''">
+                <button class="nav__button header__boton-cerrar" @click="open = false">
+                    <img src="img/close-white.png" alt="Cerrar menu" class="header__boton-cerrar-img">
+                </button>
+                <ul class="nav__lista">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">HOME</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about-me.html" class="nav__link">ABOUT</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="posts.html" class="nav__link">POSTS</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="nav__button header__boton-abrir" @click="open = true">
+                <img src="img/menu-white.png" alt="Abrir menu">
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="landing--article">
+            <div class="landing__texts--article">
+                <div class="landing__title--article">Science has not yet mastered prophecy</div>
+                <div class="landing__text--article">We predict too much for the next year and yet far too little for the next ten.</div>
+                <div class="landing__caption">Posted by Start Bootstrap on January 30, 2020 · 4 mins read</div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="margin-top">
+                <div class="description__display">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, inventore labore? Adipisci
+                        dignissimos eaque eligendi, excepturi illum laborum magnam nam obcaecati quasi quod sequi similique
+                        sint, vel velit voluptate voluptatem?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto culpa dolorem explicabo
+                        fugit harum ipsa iste molestiae nihil quas? Accusamus aspernatur enim facilis illo, itaque magni natus
+                        tempora voluptatum!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad architecto dolore, eaque eveniet excepturi
+                        fugit, illo incidunt maiores minus possimus repudiandae suscipit? Asperiores doloremque hic iste ullam.
+                        Molestiae, nisi.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae blanditiis, cumque delectus dicta
+                        distinctio dolorum enim id illo incidunt iste minima non optio porro quam quidem quod voluptatem
+                        voluptates voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequatur, cum dolor esse iusto,
+                        laudantium molestiae neque, possimus quaerat quam rerum sapiente totam veritatis. Debitis dicta eaque
+                        enim quam quo!</p>
+                </div>
+            </div>
+            <div class="description__display">
+                <h1 class="description__title">The final frontier</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dicta dolore excepturi
+                    exercitationem facilis id iste, itaque neque nisi odit placeat, provident quos recusandae reiciendis
+                    ut veniam voluptatem voluptates!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolor earum esse, et eveniet
+                    explicabo fuga ipsam maxime minus natus, necessitatibus odit omnis perferendis quae quis ratione
+                    sunt, tenetur unde?</p>
+                <p class="paragraph__gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquid amet animi, architecto commodi
+                    consectetur corporis doloribus eaque error est eum eveniet excepturi ipsam nesciunt recusandae
+                    tempore? Accusantium, odio.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi deleniti dolore fugit
+                    laboriosam magnam nam porro vitae! Eos esse fugiat magnam nesciunt perspiciatis quasi sequi sint
+                    veniam vitae voluptatem.</p>
+            </div>
+            <div class="description__display">
+                <h1 class="description__title">Reaching for the Stars</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquid, aut doloribus
+                    eaque enim iure nobis quaerat soluta ullam ut veritatis, vitae. Aperiam eaque eius id quisquam
+                    voluptas.</p>
+                <div class="article__img-text">
+                    <img src="img/tokyo.jpg" alt="Artículo">
+                    <span class="img__caption">To go places and do things that have never been done before — that's what living is all about.</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum ipsa nulla reprehenderit! Amet dicta
+                    doloribus esse fugiat magnam mollitia necessitatibus neque quas, quisquam repellendus, reprehenderit
+                    saepe sequi voluptates. Nihil, sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At atque consequuntur deserunt dignissimos
+                    ducimus eos fugiat illo itaque libero minima nam nostrum, odit officia quis sequi soluta tempora!
+                    Eum, veritatis.</p>
+                <p>
+                    Placeholder text by <a href="#" class="description__link">Space Ipsum</a>. Photographs by <a href="#" class="description__link">Unsplash</a>.
+                </p>
+            </div>
+            <div class="separated__buttons">
+                <button class="button">← PREVIOUS POST</button>
+                <button class="button">NEXT POST →</button>
+            </div>
+        </section>
+    </main>
+    <div class="separador"></div>
+    <!--Aquí empieza el footer-->
+    <footer class="container">
+        <nav class="footer__nav">
+            <ul class="footer__ul">
+                <li class="footer__li">
+                    <div class="circle">
+                        <a href="#" class="footer__link">
+                            <img src="img/email.png" alt="Gmail" class="footer__img">
+                        </a>
+                    </div>
+                </li>
+                <li class="footer__li">
+                    <div class="circle">
+                        <a href="#" class="footer__link">
+                            <img src="img/tw.png" alt="Twitter" class="footer__img">
+                        </a>
+                    </div>
+                </li>
+                <li class="footer__li">
+                    <div class="circle">
+                        <a href="#" class="footer__link">
+                            <img src="img/fb.png" alt="Facebook" class="footer__img">
+                        </a>
+                    </div>
+                </li>
+                <li class="footer__li">
+                    <div class="circle">
+                        <a href="#" class="footer__link">
+                            <img src="img/github.png" alt="Github" class="footer__img">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <p class="copyright">Copyright © Start Bootstrap 2021</p>
+    </footer>
+</body>
+</html>

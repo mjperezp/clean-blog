@@ -1,0 +1,84 @@
+.landing
+  display: grid
+  grid-template-columns: 1fr
+  height: 60vh
+  background-image: url("../img/home.jpg")
+  background-size: cover
+  background-position: center
+  &--about
+    display: grid
+    grid-template-columns: 1fr
+    height: 60vh
+    background-size: cover
+    background-position: center
+    background-image: url("../img/about.jpg")
+    .landing__title
+      color: #5dff1f
+    .landing__text
+      color: white
+  &--posts
+    display: grid
+    grid-template-columns: 1fr
+    height: 60vh
+    background-size: cover
+    background-position: center
+    background-image: url("../img/posts.jpg")
+    .landing__title
+      color: #151515
+  &--article
+    display: grid
+    grid-template-columns: 1fr
+    height: 60vh
+    background-size: cover
+    background-position: center
+    background-image: url("../img/science.jpg")
+    .landing__title
+      color: #fff
+  &--contact
+    display: grid
+    grid-template-columns: 1fr
+    height: 60vh
+    background-size: cover
+    background-position: center
+    background-image: url("../img/contact.jpg")
+    .landing__title
+      color: #ffe7e7
+    .landing__text
+      color: #ffe7e7
+  &__texts
+    grid-column: 1 / 2
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    &--article
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      text-align: center
+      gap: 1.5rem
+  &__title
+    margin-bottom: 0
+    font-size: 4.5rem
+    font-weight: bold
+    color: #ffa9c8
+    &--article
+      font-size: 3rem
+      line-height: 3.5rem
+      font-weight: bold
+      color: white
+      padding: 0 2rem
+  &__text
+    font-weight: 500
+    &--article
+      font-size: 1rem
+      line-height: 1.3rem
+      color: white
+      padding: 0 2rem
+  &__caption
+    font-family: serif
+    font-size: .7rem
+    font-style: italic
+    color: #ffffff

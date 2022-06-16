@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clean blog - home</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="theme-color" content="#151515">
+    <meta name="theme-color"
+          content="#ecd96f"
+          media="(prefers-color-scheme: light)">
+    <meta name="theme-color"
+          content="#0b3e05"
+          media="(prefers-color-scheme: dark)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="author" content="Tu nombre">
+    <meta name="generator" content="Clojure">
+    <meta name="keywords" content="html, css, javascript">
+    <meta name="description" content="my description...">
+    <meta property="og:image" content="img/screenshot.png">
+    <meta property="og:title" content="The Rock">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@cuenta">
+    <meta name="twitter:creator" content="@cuenta">
+    <meta property="og:image:secure_url" content="https://...">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="">
+    <!--JavaScript-->
+    <script src="https://unpkg.com/alpinejs" defer></script> <!--Importante:faltaba poner el https: además de alpines-->
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;500;700&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/sapps-studio/symbiosis-css/symbiosis.min.css">
+    <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+    <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 601px)">
+</head>
+<body>
+    <header
+        class="header"
+        x-data="{ open: false, isTopScroll: true }"
+        @scroll.window="isTopScroll = window.pageYOffset === 0"
+        :class="isTopScroll ? '' : 'header__black'"
+    >
+        <div class="container__header">
+            <div class="header__logo">Clean blog</div>
+            <nav class="nav" :class="open ? 'nav__show' : ''">
+                <button class="nav__button header__boton-cerrar" @click="open = false">
+                    <img src="img/close-white.png" alt="Cerrar menu" class="header__boton-cerrar-img">
+                </button>
+                <ul class="nav__lista">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">HOME</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about-me.html" class="nav__link">ABOUT</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="posts.html" class="nav__link">POSTS</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="nav__button header__boton-abrir" @click="open = true">
+                <img src="img/menu-white.png" alt="Abrir menu">
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="landing--posts">
+            <div class="landing__texts">
+                <div class="landing__title">Posts</div>
+            </div>
+        </section>
+        <!--Aquí empiezan los artículos-->
+        <section class="container">
+            <div class="section__article">
+                <article class="article">
+                    <h1 class="article__title">Man must explore, and this is exploration at its greatest</h1>
+                    <h2 class="article__subtitle">Problems look mightly small from 150 miles up</h2>
+                    <p class="article__caption">Posted by Start Bootstrap on January 31, 2020 · 4 mins read</p>
+                    <div class="separador"></div>
+                </article>
+                <article class="article">
+                    <h1 class="article__title">I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</h1>
+                    <h2 class="article__subtitle">Never in all their history have men been able truly to conceive of the world...</h2>
+                    <p class="article__caption">Posted by Start Bootstrap on January 31, 2020 · 4 mins read</p>
+                    <div class="separador"></div>
+                </article>
+                <article class="article">
+                    <h1 class="article__title article__science"><a href="article.html">Science has not yet mastered prophecy</a></h1>
+                    <h2 class="article__subtitle">We predict too much for the next year and yet far too little for the next ten.</h2>
+                    <p class="article__caption">Posted by Start Bootstrap on January 30, 2020 · 4 mins read</p>
+                    <div class="separador"></div>
+                </article>
+                <article class="article">
+                    <h1 class="article__title">Failure is not an option</h1>
+                    <h2 class="article__subtitle">Many say exploration is part of our destiny, but it's actually our duty to future generations.</h2>
+                    <p class="article__caption">Posted by Start Bootstrap on January 29, 2020 · 4 mins read</p>
+                    <div class="separador"></div>
+                </article>
+                <article class="article">
+                    <h1 class="article__title">The dreams of yesterday are the hopes of today and the reality of tomorrow</h1>
+                    <h2 class="article__subtitle">Never in all their history have men been able truly to conceive of the worlds...</h2>
+                    <p class="article__caption">Posted by Start Bootstrap on January 28, 2020 · 4 mins read</p>
+                    <div class="separador"></div>
+                </article>
+            </div>
+            <div class="button__display">
+                <button class="button">
+                    OLDER POSTS →
+                </button>
+            </div>
+        </section>
+    </main>
+    <div class="separador"></div>
+    <!--Aquí empieza el footer-->
+    <footer class="container">
+        <nav class="footer__nav">
+            <ul class="footer__ul">
+                <li class="footer__li">
+                    <div class="circle">
+                        <a href="#" class="footer__link">
+                            <img src="img/email.png" alt="Gmail" class="footer__img">
+                        </a>
+                    </div>
+                </li>
+                <li class="footer__li">
+                    <div class="circle">
+                        <a href="#" class="footer__link">
+                            <img src="img/tw.png" alt="Twitter" class="footer__img">
+                        </a>
+                    </div>
+                </li>
+                <li class="footer__li">
+                    <div class="circle">
+                        <a href="#" class="footer__link">
+                            <img src="img/fb.png" alt="Facebook" class="footer__img">
+                        </a>
+                    </div>
+                </li>
+                <li class="footer__li">
+                    <div class="circle">
+                        <a href="#" class="footer__link">
+                            <img src="img/github.png" alt="Github" class="footer__img">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <p class="copyright">Copyright © Start Bootstrap 2021</p>
+    </footer>
+</body>
+</html>
